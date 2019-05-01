@@ -1,0 +1,16 @@
+.cleanerMain{
+    height: 600px;
+    width: 450px;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+.portrait{
+    height: 300px;
+     width: 250px;
+     border-radius: 4px;
+     box-shadow: 5px 5px 10px black;
+}
+.Moniker{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 5px black;
+}

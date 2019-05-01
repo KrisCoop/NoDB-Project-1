@@ -1,0 +1,23 @@
+.RegisterArea{
+    background-color: rgba(255, 255, 255, .3);
+    padding-top: 5px;
+    padding-bottom: 30px;
+}
+
+.inputBars{
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    font-family: fantasy;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.RegButton{
+    margin-top: 24px;
+}
+
+.rHeader{
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}

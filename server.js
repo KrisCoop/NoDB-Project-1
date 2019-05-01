@@ -11,7 +11,10 @@ app.use(express.json()); app.use(bodyParser.json());
 
 //this is an endpoint to test and see if our server and app can talk to each other:
 app.get('/api/cleaners', hc.get);
-app.get('/api/cleaners?search', hc.search)
+app.get('/api/cleaners/:search', hc.search)
+app.post('/api/cleaners', hc.add)
+app.delete('/api/cleaners/:id', hc.delete);
+// app.put('/api/cleaners', hc.update)
 
 const port = process.env.PORT || 8080;
 

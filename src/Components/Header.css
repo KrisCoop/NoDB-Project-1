@@ -1,0 +1,21 @@
+body{
+    box-sizing: border-box;
+}
+
+.Header{
+    background-image: url("https://imgur.com/VxkLjvT.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.HeaderTitle{
+    height: 70px;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
