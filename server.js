@@ -14,7 +14,7 @@ app.get('/api/cleaners', hc.get);
 app.get('/api/cleaners/:search', hc.search)
 app.post('/api/cleaners', hc.add)
 app.delete('/api/cleaners/:id', hc.delete);
-// app.put('/api/cleaners', hc.update)
+app.put('/api/cleaners', hc.update)
 
 const port = process.env.PORT || 8080;
 

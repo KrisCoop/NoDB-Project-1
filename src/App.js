@@ -5,7 +5,7 @@ import './App.css';
 import Header from './Components/Header';
 import Register from './Components/Register';
 import Cleaner from './Components/Cleaner';
-// import Updater from './Components/Updater';
+import Updater from './Components/Updater';
 
 
 class App extends Component {
@@ -51,13 +51,15 @@ class App extends Component {
     })
   }
 
-  // updateCleaner = (obj) => {
-  //   axios.put('/api/cleaners', obj).then((res) => {
-  //     this.setState({
-  //       list: res.data
-  //     })
-  //   })
-  // }
+
+  //sort this part out later
+  updateCleaner = (obj) => {
+    axios.put('/api/cleaners', obj).then((res) => {
+      this.setState({
+        list: res.data
+      })
+    })
+  }
 
 
   render(){
@@ -72,8 +74,7 @@ class App extends Component {
         <div className="lister">
           {lister}
         </div>
-        
-        {/* <Updater updateCleaner={this.updateCleaner}/> */}
+        <Updater updateCleaner={this.updateCleaner}/>
       </div>
     );
   }

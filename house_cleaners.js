@@ -121,7 +121,7 @@ let houseCleaners = [
         id: 19
     },
     {
-        name: "Goretoof da Furious Butler",
+        name: "Goretoof the Fearsome Butler",
         pic: "https://imgur.com/fSfkvzj.jpg",
         motto: "I clean yer fings again, and again, until they's storp movin' *hur hur*",
         id: 20
@@ -168,19 +168,20 @@ module.exports = {
         houseCleaners.splice(index, 1);
         res.status(200).send(houseCleaners)
     },
-    // update: function(req, res){
-    //     let {id, name, pic, motto} = req.body;
-    //     let index = null;
-    //     houseCleaners.forEach((cleaner, i) => {
-    //         if(cleaner.id === Number(id)){
-    //             index = i;
-    //         }
-    //     })
-    //     houseCleaners[index] = {
-    //         name: name || houseCleaners[index].name,
-    //         motto: motto || houseCleaners[index].motto,
-    //         pic: pic || houseCleaners[index].pic
-    //     }
-    //     res.status(200).send(houseCleaners)
-    // }
+    update: function(req, res){
+        let {id, name, pic, motto} = req.body;
+        let index = null;
+        houseCleaners.forEach((cleaner, i) => {
+            if(cleaner.id === Number(id)){
+                index = i;
+            }
+        })
+        houseCleaners[index] = {
+            name: name || houseCleaners[index].name,
+            motto: motto || houseCleaners[index].motto,
+            pic: pic || houseCleaners[index].pic,
+            id: Number(id)
+        }
+        res.status(200).send(houseCleaners)
+    }
 }
